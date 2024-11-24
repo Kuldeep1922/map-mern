@@ -88,7 +88,7 @@ socket.on("receive-location", (data) => {
   const { userName, latitude, longitude } = data;
 
   // Center map on received location (optional)
-  map.setView([latitude, longitude]);
+  // map.setView([latitude, longitude]);
 
   if (markers[userName]) {
     // Update the existing marker's position and popup
@@ -111,3 +111,5 @@ socket.on("user-disconnected", (userName) => {
     delete markers[userName];
   }
 });
+
+
